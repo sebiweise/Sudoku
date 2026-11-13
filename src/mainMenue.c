@@ -40,7 +40,7 @@ int mainMenue() {
     printMainMenue();
 
     printf("\n\tAuswahl: ");
-    scanf(" %20s", sMenue);
+    scanf(" %19s", sMenue);
     clear();
 
     if (strcmp(sMenue, "1") == 0)
@@ -97,13 +97,13 @@ Rueckgabeparameter: -
 */
 int StartGameMenue() {
     // Variablen
-    char sStartGame[] = {""};
-    int iLevel, iReturnCode;
+    char sStartGame[20];
+    int iLevel = 0, iReturnCode;
 
     printStartGame();
 
     printf("\n\tAuswahl: ");
-    scanf(" %s", sStartGame);
+    scanf(" %19s", sStartGame);
 
     if (strcmp(sStartGame, "1") == 0)
     {
@@ -127,7 +127,9 @@ int StartGameMenue() {
         iReturnCode = 0;
     }
 
-    gameUI(iLevel);
+    if (iLevel != 0) {
+        gameUI(iLevel);
+    }
     return iReturnCode;
 }
 

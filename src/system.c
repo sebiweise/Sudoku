@@ -29,11 +29,11 @@ Rueckgabeparameter: -
 ============================================================================
 */
 void clear(){
-    if(!strcmp(OS, "WINDOWS")) {
-        system("cls");
-    } else {
-        system("clear");
-    }
+#ifdef _WIN32
+    system("cls");
+#else
+    system("clear");
+#endif
 }
 
 /*
@@ -45,12 +45,11 @@ Rueckgabeparameter: -
 ============================================================================
 */
 void pause(){
-    if(!strcmp(OS, "WINDOWS")) {
-        system("pause");
-    } else {
-        system("read -r -p \"Druecken Sie eine beliebige Taste . . .\"");
-    }
-
+#ifdef _WIN32
+    system("pause");
+#else
+    system("read -r -p \"Druecken Sie eine beliebige Taste . . .\"");
+#endif
 }
 
 /*
