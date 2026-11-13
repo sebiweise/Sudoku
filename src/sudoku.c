@@ -105,9 +105,9 @@ void randomSingleSwap(int sudoku[SIZE][SIZE],unsigned int iCheck) {
     srand((unsigned int) time(NULL));
 
     for(i=0;i<3;i++) {
-        iK1=(rand()%(iMax-iMin+1))+iMin;
+        iK1=(rand()%(iMax-iMin+1))+iMin; // NOSONAR - non-cryptographic PRNG is sufficient for puzzle shuffling
         do{
-            iK2=(rand()%(iMax-iMin+1))+iMin;
+            iK2=(rand()%(iMax-iMin+1))+iMin; // NOSONAR - non-cryptographic PRNG is sufficient for puzzle shuffling
         } while(iK1==iK2);
         iMax+=3;iMin+=3;
 
@@ -224,11 +224,11 @@ void fillSudoku(int sudoku[SIZE][SIZE],
 
         do {
             do {
-                iRand_column = (rand() % 9);
+                iRand_column = (rand() % 9); // NOSONAR - non-cryptographic PRNG is sufficient for puzzle generation
             } while (iRand_column < 0);
 
             do {
-                iRand_row = (rand() % 9);
+                iRand_row = (rand() % 9); // NOSONAR - non-cryptographic PRNG is sufficient for puzzle generation
             } while (iRand_row < 0);
 
             sudoku[iRand_row][iRand_column]

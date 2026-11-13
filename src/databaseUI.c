@@ -75,17 +75,14 @@ int printLevelChooser() {
         case '1':
             iLevelFilter = 1;
             return 1;
-            break;
         case '2':
             iLevelFilter = 2;
             return 1;
         case '3':
             iLevelFilter = 3;
             return 1;
-            break;
         default:
             return 0;
-            break;
     }
 }
 /*
@@ -246,14 +243,14 @@ char* signInUI() {
     printf("\n\t%c Bitte geben Sie Ihren Benutzernamen ein:"
            "                     %c\n\t%c ", 186, 186, 186);
 
-    scanf(" %s", sUsername);
+    scanf(" %19s", sUsername);
 
     printf("\t%c                                           "
            "                   %c", 186, 186);
     printf("\n\t%c Bitte geben Sie Ihr Passwort ein:"
            "                            %c\n\t%c ", 186, 186, 186);
 
-    scanf(" %s", sPassword);
+    scanf(" %39s", sPassword);
 
     printf("\t%c                                           "
                    "                   %c", 186, 186);
@@ -306,7 +303,7 @@ char* signUpUI(){
     char sLastName[20];
     char sPassword[40];
     char sCheckPassword[40];
-    char* cCheck;
+    char* cCheck = NULL;
     int iCheckPassword,i;
 
     printSudokuLogo();
@@ -327,31 +324,31 @@ char* signUpUI(){
 
     printf("\n\t%c Bitte geben Sie Ihren Vornamen ein (20 Zeichen):"
            "             %c\n\t%c ", 186, 186, 186);
-    scanf(" %s", sFirstName);
+    scanf(" %19s", sFirstName);
 
     printf("\t%c                                                     "
            "         %c", 186, 186);
     printf("\n\t%c Bitte geben Sie Ihren Nachnamen ein (20 Zeichen):"
            "            %c\n\t%c ", 186, 186, 186);
-    scanf(" %s", sLastName);
+    scanf(" %19s", sLastName);
 
     printf("\t%c                                                     "
                    "         %c", 186, 186);
     printf("\n\t%c Bitte geben Sie Ihren Benutzernamen ein (20 Zeichen):"
            "        %c\n\t%c ", 186, 186, 186);
-    scanf(" %s", sUsername);
+    scanf(" %19s", sUsername);
 
     printf("\t%c                                                     "
                    "         %c", 186, 186);
     printf("\n\t%c Bitte geben Sie ein Passwort ein:"
            "                            %c\n\t%c ", 186, 186, 186);
-    scanf(" %s", sPassword);
+    scanf(" %39s", sPassword);
 
     printf("\t%c                                                     "
                    "         %c", 186, 186);
     printf("\n\t%c Bitte geben Sie das Passwort erneut ein:"
            "                     %c\n\t%c ", 186, 186, 186);
-    scanf(" %s", sCheckPassword);
+    scanf(" %39s", sCheckPassword);
 
     printf("\t%c                                                     "
                    "         %c", 186, 186);

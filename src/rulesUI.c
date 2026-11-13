@@ -32,7 +32,7 @@ Rueckgabeparameter: -
 */
 int printRules() {
     // Variablen
-    char sAuswahl[] = {""};
+    char sAuswahl[20];
 
     printSudokuLogo();
 
@@ -71,7 +71,7 @@ int printRules() {
     printf("%c", 188);
 
     printf("\n\tAuswahl: ");
-    scanf(" %s", sAuswahl);
+    scanf(" %19s", sAuswahl);
 
     if (strcmp(sAuswahl, "x") == 0 || strcmp(sAuswahl, "X") == 0)
     {
